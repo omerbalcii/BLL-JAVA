@@ -1,11 +1,31 @@
+import java.util.Scanner;
 
 public class Main {
 
 	public static void main(String[] args) {
 		//ornek1();
 		//ornek2();
-		ornek3();
+		//ornek3();
+		ornek4();
 
+	}
+
+	private static void ornek4() {
+		// Dışarıdan girilen bir değerin faktoriyelini hesaplayan program
+		int faktoriyel = 1;
+		Scanner input = new Scanner(System.in);
+		System.out.println("Lütfen Bir Sayı Giriniz = ");
+		int sayi = input.nextInt();
+		
+		for(int i=sayi;i>0;i--)
+		{
+			faktoriyel=faktoriyel*i;
+		}
+		System.out.println(faktoriyel);
+		
+		
+		
+		
 	}
 
 	private static void ornek3() {
