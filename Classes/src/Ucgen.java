@@ -1,18 +1,56 @@
+import java.util.Scanner;
 
 public class Ucgen {
 
-	int kucukKenar;
-	int buyukKenar;
+	double kenar1;
+	double taban;
+	double yukseklik;
 	
 	public static void main(String[] args) {
 		
-		Ucgen ucgen = new Ucgen();
-		ucgen.buyukKenar=10;
-		ucgen.kucukKenar=25;
-		int sonuc=ucgen.buyukKenar+ucgen.kucukKenar;
-		System.out.println(sonuc);
-		
+	Scanner input = new Scanner(System.in);
+	Ucgen u =new Ucgen();
+	
+	System.out.println("Kenar 1 Giriniz : ");
+	u.kenar1 = input.nextDouble();
+	
+	System.out.println("Yükseklik Giriniz : ");
+	u.yukseklik=input.nextDouble();
+	
+	System.out.println("Taban Giriniz : ");
+	u.taban=input.nextDouble();
+	
+	u.bilgiGoster();
+	
+	
+	 double cevre = u.cevrehesapla();
+     System.out.println("Çevre: " + cevre);
 
+     
+     double alan = u.alanhesapla();
+     System.out.println("Alan: " + alan);
+
+     input.close();
+	
+
+
+}
+	
+	public double alanhesapla() {
+		return (taban*yukseklik)/2;
 	}
-
+	public double cevrehesapla() {
+		return kenar1+yukseklik+taban;
+	}
+	
+	public void bilgiGoster() {
+        System.out.println("Kenar 1: " + kenar1);
+        System.out.println("Taban: " + taban);
+        System.out.println("Yükseklik: " + yukseklik);
+    }
+	
+	
+	
+	
+	
 }
